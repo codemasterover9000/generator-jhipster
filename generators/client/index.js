@@ -295,7 +295,7 @@ module.exports = JhipsterClientGenerator.extend({
             } else {
                 this.BUILD_DIR = 'build/';
             }
-            this.DIST_DIR = this.BUILD_DIR + constants.CLIENT_DIST_DIR;
+            this.DIST_DIR = constants.CLIENT_PREFIX + this.BUILD_DIR + constants.CLIENT_DIST_DIR;
         },
 
         composeLanguages: function () {
