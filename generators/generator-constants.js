@@ -25,6 +25,7 @@ const DOCKER_GRAFANA = 'grafana/grafana:4.0.2';
 
 // all constants used throughout all generators
 
+const CLIENT_PREFIX = '../serverconsole/';
 const MAIN_DIR = 'src/main/';
 const TEST_DIR = 'src/test/';
 
@@ -46,11 +47,13 @@ const constants = {
 
     MAIN_DIR: MAIN_DIR,
     TEST_DIR: TEST_DIR,
-
-    CLIENT_MAIN_SRC_DIR: MAIN_DIR + 'webapp/',
-    CLIENT_TEST_SRC_DIR: TEST_DIR + 'javascript/',
+    
+    CLIENT_PREFIX: CLIENT_PREFIX,
+    
+    CLIENT_MAIN_SRC_DIR: CLIENT_PREFIX + MAIN_DIR + 'webapp/',
+    CLIENT_TEST_SRC_DIR: CLIENT_PREFIX + TEST_DIR + 'javascript/',
     CLIENT_DIST_DIR: CLIENT_DIST_DIR,
-    ANGULAR_DIR: MAIN_DIR + 'webapp/app/',
+    ANGULAR_DIR: CLIENT_PREFIX + MAIN_DIR + 'webapp/app/',
 
     SERVER_MAIN_SRC_DIR: MAIN_DIR + 'java/',
     SERVER_MAIN_RES_DIR: MAIN_DIR + 'resources/',
